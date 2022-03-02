@@ -13,7 +13,7 @@ type ResponseBody = {
 
 export default RouteHandler<NextApiRequest, NextApiResponse>()
     .get(async (request, response) => {
-        Message.removeExpiredMessages();
+        await Message.removeExpiredMessages();
 
         const slug = request.query.slug.toString();
         const message = (await Message.findBySlug(slug)) as Message;
