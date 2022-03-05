@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEventHandler, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -37,7 +37,7 @@ const MessagePage: NextPage<Props> = ({ exists, slug }: Props) => {
         return responseData;
     };
 
-    const handleSubmit = async (event: any) => {
+    const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
         event.preventDefault();
         setError('');
 

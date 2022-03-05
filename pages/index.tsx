@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEventHandler, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ const IndexPage: NextPage = () => {
         return await response.json();
     };
 
-    const handleSubmit = async (event: any) => {
+    const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
         event.preventDefault();
         if (password !== passwordConf) return setError('Passwords do not match.');
 
