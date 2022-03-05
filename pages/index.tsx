@@ -64,14 +64,17 @@ const IndexPage: NextPage = () => {
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         { slug &&
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col">
                                 <div>
                                     <h2 className="text-lg font-bold text-gray-700">Share Your Message</h2>
                                     <p className="text-sm">Share the following link and your password with the recipient.</p>
                                 </div>
-                                <div className={`${styles['content-box']} text-slate-600 w-full overflow-y`}>
+                                <div className="bg-slate-100 px-4 py-2 rounded resize-none mt-4 text-slate-600">
                                     { `${window.location.origin}/${slug}` }
                                 </div>
+                                <span className="pb-2 text-xs text-red-600 mt-2 self-start">
+                                    Messages will self-destruct when read or after 30 days.
+                                </span>
                             </div>
                         }
                         { ! slug &&
