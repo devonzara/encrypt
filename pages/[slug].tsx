@@ -67,7 +67,7 @@ const MessagePage: NextPage<Props> = ({ exists, slug }: Props) => {
                                     <h2 className="text-lg font-bold text-gray-700">Decrypted Message</h2>
                                     <p className="text-sm">This message has self-destructed and cannot be accessed again.</p>
                                 </div>
-                                <div className={`${styles['content-box']} text-slate-600 w-full h-48 overflow-y`}>{ rawMessage }</div>
+                                <div className={`${styles['content-box']} text-slate-600 w-full h-48 overflow-y break-words overflow-y-scrollgit`}>{ rawMessage }</div>
                                 <Link href="/">
                                     <a className="self-start items-center bg-blue-500 disabled:bg-blue-300 disabled:pointer rounded text-white px-4 py-2">
                                         Encrypt a new message
