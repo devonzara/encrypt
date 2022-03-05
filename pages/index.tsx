@@ -72,11 +72,6 @@ const IndexPage: NextPage = () => {
                                 <div className={`${styles['content-box']} text-slate-600 w-full overflow-y`}>
                                     { `${window.location.origin}/${slug}` }
                                 </div>
-                                <Link href="/">
-                                    <a className="self-start items-center bg-blue-500 disabled:bg-blue-300 disabled:pointer rounded text-white px-4 py-2">
-                                        Encrypt a new message
-                                    </a>
-                                </Link>
                             </div>
                         }
                         { ! slug &&
